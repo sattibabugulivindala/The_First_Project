@@ -1,0 +1,94 @@
+body {
+    margin: 0px;
+    
+}
+.csMain{
+    background-image: url("heroBack-2.jpg");
+    background-size: cover;
+    padding: 1.5rem;
+}
+.cs-contactContainer{
+    backdrop-filter: blur(10px);
+    border: 2px solid gray;
+    border-radius: 1.2rem;
+}
+.conHeading {
+    margin: 0px;
+    padding-left: 2rem;
+    padding: 1rem;
+}
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.containerOne{
+    width: 54vw;   
+    padding: 2rem;
+    
+}
+.containerTwo{
+    width: 30vw;
+    padding: 2rem;
+}
+.inputElm{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border: 0px ;
+    border-bottom: 2px solid #96c4ff;
+    font-size: 1.2rem;
+    transition: 0.2s ease-in-out;
+    background-color: transparent;
+}
+.inputElm:focus{
+    outline: none;
+    font-size: 1.6rem;
+    color: #f3872f;
+}
+.inputElm::placeholder{
+    color: white;
+}
+.textElm{
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #96c4ff;
+    font-family: normal;
+    transition: 0.2s ease-in-out;
+    background-color: transparent;
+}
+.textElm::placeholder{
+    color: white;
+}
+
+.textElm:focus{
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.submitBtn{
+    width: 8rem;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    background-color: #96c4ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition:  0.5s ease;
+    border-radius: 1.2rem;
+}
+.submitBtn:hover{
+    transform: scale(1.2);
+    color: black;
+    font-weight: bold;
+    background-color: #f3872f;
+}
+.detailsHead{
+    color: white;
+}
+@media (max-width:768px){
+    .containerOne{
+        width: 100vw;
+    }
+}

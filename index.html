@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patha Home</title>
+    <link rel="icon" href="partha_logo.jpg" type="image/x-icon">
+    <script  src="https://kit.fontawesome.com/67f422b277.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet/less" type="text/css" href="newLess.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+</head>
+<body>
+    <section>
+        <nav class="navBarContainer" id="navBar">
+        </nav>
+    </section>
+    <section class="sectionOne" >
+        <div class="sectionCrdOne">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+            <h1 class="firstName">Partha<p class="MainName" id="companyName"></p></h1>
+            <h2 class="banner-heading animated fade-header">
+                <div class="animated-heading-start default">We are working on</div>
+                  <div class="slider default">
+                    <div class="slide default">
+                    Trust
+                    </div>
+                    <div class="slide default">
+                    Innovation
+                    </div>
+                    <div class="slide default">
+                    Growth
+                    </div>
+                    <div class="slide default">
+                    Quality
+                    </div>
+                  </div>
+              </h2>
+              <div class="bioContainer">
+                <p class="bio">At Partha Infrastructure Construction, we stand as a beacon of excellence in the construction industry, crafting a legacy built on unwavering dedication and unparalleled expertise.Our commitment to greatness permeates every facet of our operations, making us a trusted name in the world of construction.client satisfaction is at the core of our ethos.  Our unwavering commitment to exceeding client expectations has fostered enduring relationships. The trust bestowed upon us by our clients is a reflection of our dedication to delivering not just structures, but dreams realized.
+                </p>    
+              </div>
+        </div>
+        <section class="sectionTwo">
+          <h1 class="subHeading"> Crafting Excellence  "Where Quality Defines Success"</h1>
+            <div class="sectionCrdTwo">
+                <div class="sectionCrdTwoChild">
+                    <h1 class="secondHead">Our Mission</h1>
+                    <p class="secondPara">At Partha Infrastructures, our mission is to redefine excellence in construction by delivering innovative and
+                        sustainable solutions. We are dedicated to creating spaces that enrich lives, fostering a culture of safety,
+                        integrity, and collaboration. Committed to our clients and communities, we strive to exceed expectations, ensuring
+                        enduring value in every project we undertake.</p>
+                </div>
+                <div class="sectionCrdTwoChildMini">
+                    <img src="mission-removebg.png" alt="" class="missionImage">
+                </div>
+            </div>
+            <div class="sectionCrdTwo">
+                <div class="sectionCrdTwoChild" style="order: 1;" >
+                    <h1 class="secondHead">Our Vision</h1>
+                    <p class="secondPara">Partha Infrastructures envisions a future where our constructions stand as testaments to quality, craftsmanship,
+                        and environmental stewardship. We aspire to be a leader in the construction industry, recognized for our
+                        unwavering commitment to excellence, cutting-edge designs, and social responsibility. Through continuous innovation
+                        and a focus on client satisfaction, we aim to build a legacy of enduring structures that shape a better, more
+                        sustainable world for generations to come.</p>
+                </div>
+                <div class="sectionCrdTwoChildMini" style="order: 0;">
+                    <img src="visionTwo-removebg-preview.png" alt="" class="missionImage">
+                </div>
+            </div>
+        </section>              
+        <section class="cs-sectionFour">
+          <div class="divOne">
+              <h1>Want to know more?</h1>
+              <p>We’re happy to tell you more about how we work, or to hear about how Mediaboom can help tell your brand’s story.</p>
+          </div>
+          <div class="divTwo">
+            <a href="Contact Us.html"><button class="cs-button-Touch">GET IN TOUCH</button></a>
+          </div>
+        </section>
+        
+        <section class="cs-five">
+          
+          <marquee behavior="" direction=""> Quality is key to Success </marquee>  
+          
+        </section>
+    </section>
+    <footer class="footermenu"></footer>
+    <script defer src="include.js"></script>
+    <script src="home.js"></script> 
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sectionTwo = document.querySelector('.sectionTwo');
+  const sectionCrdTwoChild = document.querySelectorAll('.sectionCrdTwoChild');
+  const sectionCrdTwoChildMini = document.querySelectorAll('.sectionCrdTwoChildMini');
+
+  const options = {
+    threshold: .5
+  };
+
+  const sectionTwoObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  const horizontalChildObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  sectionTwoObserver.observe(sectionTwo);
+  sectionCrdTwoChild.forEach(child => horizontalChildObserver.observe(child));
+  sectionCrdTwoChildMini.forEach(child => horizontalChildObserver.observe(child));
+});
+        
+    </script>
+</body>
+
+</html>

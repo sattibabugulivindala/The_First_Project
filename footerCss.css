@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+}
+.footermenu{
+    background-color: black;
+}
+.footerSub{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.firstCard{
+    width: 40%;
+    
+}
+.secondCard > ul > li {
+    margin: 1rem;
+    
+}
+.thirdCard > ul > li{
+    margin: 1rem;
+    
+}
+.footerHeading{
+    color: #f3872f;
+}
+.companyLogo{
+    width: 9rem;
+    height: 5rem;
+}
+.navItems {
+    text-decoration: none;
+    color: #96c4ff;
+    font-size: 1.2rem;
+}
+.icons {
+    color: #f3872f;
+    vertical-align: text-top;
+    display: inline-block;
+}
+li {
+    list-style-type: none;
+    
+}
+.shareIcons{
+    border: 2px solid #f3872f;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.shareIconMod{
+    font-size: 1.5rem;
+}
+.secondCard > ul {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.thirdCard > ul {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.thirdCard > ul > li  :hover{
+    color:#f3872f;
+}
+.secondCard > ul :hover{
+    transform: scale(1.2);
+}
+.navPrivacyLink:hover {
+    color: #f3872f;
+}
+.sharelink :hover{
+    color: #96c4ff;
+    border-color: #96c4ff;
+}

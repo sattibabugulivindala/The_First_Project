@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    
+}
+
+.navBar{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.navContainer{
+    display: flex;
+}
+.buttonLogo{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.companyLogo{
+    width: 9rem;
+    height: 5rem;
+}
+.navItems {
+    text-decoration: none;
+    color: #96c4ff;
+    font-size: 1.2rem;
+}
+li {
+    display: inline-block;
+    margin: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.ContactBtn{
+    width: 10rem;
+    height: 3rem;
+    margin-right: 4rem;
+    color: whitesmoke;
+    background-color:#f3872f;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+
+}
+
+.icons {
+    color: #f3872f;
+    vertical-align: text-top;
+    display: inline-block;
+}
+li:hover{
+    transform: scale(1.5);
+    .navItems{
+        color: #f3872f;
+    }
+}
+ul:hover li:not(:hover) {
+    transform: scale(0.9);
+}
+.ContactBtn:hover{
+    color: #f3872f;
+    background-color: #96c4ff;
+    transform: scale(1.1);
+    font-size: 1.3rem;
+}
+.hambergerBtn{
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+.hamIcon{
+    font-size: 2rem;
+}
+.hambergerCon{
+    display: none;
+}
+
+
+@media (max-width : 768px){
+    .ContactBtn{
+        display: none;
+    }
+    ul {
+        display: none;
+    }
+    .hambergerCon{
+        display: block;
+    }
+    .mobileBar > div:hover  {
+        transform: translate(3rem);
+        .navItems{
+            color: #96c4ff;
+        }
+    }    
+
+}
+.mobileBar{
+    background-color: #000000;
+    padding-left: 2rem;
+    overflow: hidden;
+    display: none;
+    max-height: 1000px;
+    animation: slideDown 1.5s ease;
+    
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 1000px; /* Set the final max-height */
+    }
+}
+
+
+
+
+.mobileBar > div   {
+    padding: 1rem;
+    overflow: none;
+}
+.mobileBar > div > a {
+    color: #f3872f;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+.mobileBar > div > a > i {
+    color: #96c4ff;
+}
+

@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+}
+.projects-page {
+    background-image: url("https://img.freepik.com/free-photo/singapore-nobody-urban-modern-high_1112-1067.jpg?t=st=1709392306~exp=1709395906~hmac=679d7deba195d466b95d20b4d39538677480d5226da26db486a533f8cf975aac&w=826");
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center;
+  }
+  .projects-page-head{
+    font-size: 60px; 
+    font-weight: bold; 
+    color: black;
+  }
+  .heading-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    height: auto;
+    font-size: 50px;
+  }
+  
+  .project-para {
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400; 
+    color: black;
+  }
+.cards_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding-top: 20px;
+    overflow: hidden;
+    background-color: white;    
+}
+.imageCard{
+    height: 250px;
+    border-radius: 5px;
+}
+.Intro{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.card:hover{
+    cursor: pointer;
+}
+.Intro:hover{
+    opacity: 1;
+} 
+.card{
+    width: 33%;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    box-sizing: border-box;
+}
+.imageCard{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.Intro h1{
+    font-size: 20px;
+    color: #f3872f;
+    /* margin-bottom: 15px; */
+}
+.Intro p{
+    font-size: 11px;
+    color: #f9fafc;
+}
+.Intro > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.Intro:hover >*{
+    transform: translateY(0px);
+}
+
+.container-head1{
+    text-align: left;
+    color:#f3872f;
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* background-color: grey; */
+}
+.Our-Service-para{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    margin-top: 30px;
+    text-align: justify;
+}
+.list_elements{
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 15px;
+}
+.container-head2{
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color:#367ba8;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.container-head{
+    background-color: grey;
+    padding: 2rem;
+}
+.our-services{
+    color: grey;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+
+    .card{
+        width: 100%;
+    }
+    .Intro:hover{
+        opacity: 1;
+    }
+    .projects-page{
+        background-image: url("services_mb_view.jpg");
+    }
+
+}

@@ -1,0 +1,184 @@
+<div class="navBar">    
+    <div class="navContainer">
+        <div>
+            <button class="buttonLogo"><img class="companyLogo" src="company_logo-removebg-preview.png" alt=""></button>
+        </div>
+        <ul class="ulElem">
+            <li class="liElem">
+                <a href="index.html" class="navItems">  <i class="fas fa-house icons"></i> Home</a>
+            </li>
+            <li class="liElem">
+                <a href="about_us.html" class="navItems"> <i class="fa-solid fa-users-rectangle icons"></i> About</a>
+            </li>
+            <li class="liElem">
+                <a href="Projects.html" class="navItems"> <i class="fa-solid fa-building-shield icons"></i> Projects</a>
+            </li>
+            <li class="liElem">
+                <a href="Service.html" class="navItems"> <i class="fa-solid fa-compass-drafting icons"></i> Services</a>
+            </li>
+            <li class="liElem">
+                <a href="saftey.html" class="navItems">  <i class="fa-solid fa-helmet-safety icons"></i> Safety</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="ContactBtn"><a href="Contact Us.html" class="navItems" style="color: #000000;">Contact Us</a></button>
+    </div>
+    <div class="hambergerCon">
+        <button  class="hambergerBtn" onclick=navigation()><i class="fa-solid fa-bars icons hamIcon" id = "hamIcon"></i></button>
+    </div>
+</div>
+<div class="mobileBar" id = mobileNavBar>
+    <div><a href="index.html" class="navItems"> <i class="fa-solid fa-house icons"></i> Home</a></div>
+    <div><a href="about_us.html" class="navItems"> <i class="fa-solid fa-users-rectangle icons"></i> About</a></div>
+    <div><a href="Projects.html" class="navItems"> <i class="fa-solid fa-building-shield icons"></i> Projects</a></div>
+    <div><a href="Service.html" class="navItems"> <i class="fa-solid fa-compass-drafting icons"></i> Services</a></div>
+    <div><a href="saftey.html" class="navItems"> <i class="fa-solid fa-helmet-safety icons"></i> Safety</a></div>
+
+</div>
+
+<style>
+body {
+    margin: 0;
+}
+.navBarContainer{
+    position: sticky;
+    
+}
+.navBar{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+.navContainer{
+    display: flex;
+    justify-content: center;
+}
+.buttonLogo{
+    background-color: transparent;
+    border: none;
+}
+.companyLogo{
+    width: 9rem;
+    height: 5rem;
+}
+.navItems {
+    text-decoration: none;
+    color: #96c4ff;
+    font-size: 1.2rem;
+}
+.liElem {
+    display: inline-block;
+    margin: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.ContactBtn{
+    width: 10rem;
+    height: 3rem;
+    margin-right: 4rem;
+    color: whitesmoke;
+    background-color:#f3872f;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+
+}
+
+.icons {
+    color: #f3872f;
+    display: inline-block;
+}
+.iconsSVG{
+    width: 1rem;
+    height: 1rem;
+    fill: #f3872f;
+}
+.liElem:hover{
+    transform: scale(1.5);
+    .navItems{
+        color: #f3872f;
+    }
+}
+.ulElem:hover .liElem:not(:hover) {
+    transform: scale(0.9);
+}
+.ContactBtn:hover{
+    color: #f3872f;
+    background-color: #96c4ff;
+    transform: scale(1.1);
+    font-size: 1.3rem;
+}
+.hambergerBtn{
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+.hamIcon{
+    font-size: 2rem;
+}
+.hambergerCon{
+    display: none;
+}
+
+
+@media (max-width : 768px){
+    .ContactBtn{
+        display: none;
+    }
+    .ulElem {
+        display: none;
+    }
+    .hambergerCon{
+        display: block;
+        transform: translateX(10px);
+        
+    }
+    .mobileBar > div:hover  {
+        transform: translate(3rem);
+        .navItems{
+            color: #96c4ff;
+        }
+    }.companyLogo{
+        transform: translateX(-50px);
+    }    
+
+}
+.mobileBar{
+    background-color: #000000;
+    padding-left: 2rem;
+    overflow: hidden;
+    display: none;
+    max-height: 1000px;
+    animation: slideDown 1.5s ease;
+    
+    
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 1000px; /* Set the final max-height */
+    }
+}
+
+.mobileBar > div   {
+    padding: 1rem;
+    overflow: none;
+}
+.mobileBar > div > a {
+    color: #f3872f;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+.mobileBar > div > a > i {
+    color: #96c4ff;
+}
+</style>

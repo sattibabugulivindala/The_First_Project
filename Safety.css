@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.s-bg {
+    background: url("https://img.freepik.com/free-photo/crane-holding-iron-construction-where-sitting-builder-with-bare-torso-eating-drinking-milk-extreme-building-high-cityscape-background_7502-8704.jpg?t=st=1709392931~exp=1709396531~hmac=892b5e685d2593d96a6ebf44f20c884d69fafe91cc4d312e0e5c91ba90c438b8&w=826") ;
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.8; */
+}
+.s-para{
+    font-size: 25px;
+    font-weight: 600px;
+    position: absolute;
+    top: 30%;
+    float: right;
+    left: 45%;
+}
+.s-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 40%;
+    
+
+}
+.saftey_head{
+    float: right;
+    left: 50%;
+}
+
+.s-head h1 {
+    font-size: 6em;
+    color: black;
+    position: absolute;
+    top: 0;
+}
+
+.s-we-follow-head {
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.s-we-follow-head1 {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+.s-we-follow-content {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.s-we-follow-content p {
+    font-size: 1em;
+}
+
+.s-lists {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+@media (max-width:768px){
+    .s-bg{
+        background: url("Safety_mv_view.avif");
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .s-head{
+        position: relative;
+        top: 0;
+    }
+    .s-head h1{
+        font-size: 4em;
+        color: goldenrod;
+
+    }
+    .saftey_head{
+        left: 0;
+
+    }
+    .s-para{
+        left: 0;
+    }
+}

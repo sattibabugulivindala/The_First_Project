@@ -1,0 +1,382 @@
+.default {
+    margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      text-transform: inherit;
+    //   vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  .animated {
+    display: flex;
+    align-items: center;
+    font-size: 56px;
+    // position: relative;
+    font-family: "Source Pro Sans", Lato, Heveltica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    // margin-bottom: 8px;
+  }
+  
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 67px;
+    text-align: center;
+    font-weight: 700;
+  
+  }
+  
+  .slide {
+    clear: both;
+    // position: relative;
+    height: 67px;
+    margin-bottom: 67px;
+    // text-align: center;
+    color: #3acce1;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0 10px;
+    &:first-child {
+      animation: slide 5s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes slide {
+    0% {margin-top: -570px;}
+    
+    5% {margin-top: -392px;}
+    10% {margin-top: -412px;}
+    15% {margin-top: -402px;}
+    30% {margin-top: -402px;}
+    
+    35% {margin-top: -258px;}
+    40% {margin-top: -278px;}
+    45% {margin-top: -268px;}
+    50% {margin-top: -268px;}
+    
+    55% {margin-top: -124px;}
+    60% {margin-top: -144px;}
+    65% {margin-top: -134px;}
+    70% {margin-top: -134px;}
+    
+    75% {margin-top: 10px;}
+    80% {margin-top: -10px;}
+    85% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+  
+  }
+.MainName{
+    font-size: 4rem;
+    display: inline;
+}
+.sectionCrdOne{
+    padding: 3rem;
+    backdrop-filter: blur(2px);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    // border: 1px  solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.sectionOne{
+    background-image: url("images-4.jpg");
+    background-size: cover;
+    padding: 3rem;
+    overflow: hidden;
+    background-position: center;
+}
+
+.bio{
+    text-align: justify;
+    font-size: 1.2rem;
+    color: white;
+    
+}
+.bioContainer{
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1rem;
+  border: 2px solid grey;
+}
+.firstName{
+    font-size: 4rem;
+    margin: 0px;
+    padding-top: 4rem;
+}
+@media (max-width:768px){
+    .MainName{
+        font-size: 1rem;
+        
+        
+    }
+    .firstName{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .animated{
+        display: block;
+    }
+    .default{
+      font-size: 2rem;
+    }
+    .bio{
+      color: white;
+      text-align: center;
+    }
+    
+    .bioContainer{
+      height: 52vh;
+      overflow: hidden;
+      
+    }
+}
+// --------------------------------------------------sectioncardTwo
+.sectionTwo{
+  backdrop-filter: blur(5px);
+  border: 1px solid grey;
+  margin-top: 5rem;
+  
+  border-top-left-radius: 3rem ;
+  border-top-right-radius: 3rem;
+  
+}
+.sectionCrdTwo{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  
+}
+.sectionCrdTwoChild{
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid gray;
+  padding: 1rem;
+  backdrop-filter: blur(40px);
+}
+.sectionCrdTwoChildMini{
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.secondHead{
+  font-size: 3rem;
+  color: #f3872f;
+  text-decoration: underline;
+  
+}
+.secondPara{
+  font-size: 1.5rem;
+  text-align: justify;
+  color: white;
+}
+.missionImage{
+  width: 28rem;
+  height: 25rem;
+}
+.subHeading{
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #f3872f;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  margin: 0px;
+  padding: 2rem;
+  border-bottom: 2px solid white;
+}
+
+@media (max-width:768px){
+  .sectionCrdTwoChild{
+    width: 100vw;
+    order: 2;
+  }
+  .sectionCrdTwoChildMini{
+    width: 100vw;
+    order : 1;
+  }
+  .missionImage{
+    width: 20rem;
+    height: 15rem;
+  }
+  .secondHead{
+    font-size: 1.5rem;
+  }
+  .secondPara{
+    font-size: 1rem;
+  }
+  .subHeading{
+    font-size: 1.5rem;
+  }
+}
+/* Add these styles to your newLess.less file */
+
+.sectionCrdTwoChild {
+  opacity: 0;
+  transform: translateX(-100px); /* Move to the left initially */
+  transition: opacity 1s, transform 1s;
+}
+
+.sectionCrdTwoChildMini {
+  opacity: 0;
+  transform: translateX(100px); /* Move to the right initially */
+  transition: opacity 1s, transform 1s;
+}
+
+// -----------------------------------------------------
+
+.sectionCrdOne  span {
+  position: absolute;
+  display: block;
+}
+
+.sectionCrdOne  span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f3872f);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.sectionCrdOne  span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.sectionCrdOne  span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #f3872f);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.sectionCrdOne  span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+// ------------------------------cs-sectionFour
+.cs-sectionFour{
+  display: flex;
+  background-image:linear-gradient(#f0f0f002 40% ,#f3872f );
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: 0 !important;
+}
+.divOne{
+width: 80%;
+}
+.divTwo{
+  display: flex;
+  width: 20%;
+  
+}
+.cs-sectionFour > div > h1 {
+  color: white;
+  font-size: 2rem;
+}
+.cs-sectionFour > .divOne > p {
+  color: white;
+  font-size: 1.5rem;
+}
+.cs-sectionFour > .divTwo > a {
+  align-self: center;
+}
+.cs-button-Touch{
+  width: 10rem;
+  height: 3rem;
+  margin-right: 4rem;
+  color: #000000;
+  background-color:#03e9f4;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+.cs-five{
+  color: white;
+  margin-top: 2rem;
+  
+}
+.cs-five > marquee {
+  font-size: 2rem;
+  
+}
+@media (max-width:768px) {
+  .divOne{
+    width: 100%;
+  }
+  .divTwo{
+    width: 100%;
+  }
+  .divOne > h1 {
+    font-size: 1.2rem;
+  }
+  .cs-sectionFour > .divOne > p {
+    font-size: 1rem;
+  }
+  .cs-five > marquee {
+    font-size: 1rem;
+  }
+}
+
